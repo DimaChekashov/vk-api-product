@@ -16,3 +16,13 @@
 .item.card a{
   font-style: 20px;
 }
+
+.bg-light{
+  margin-bottom: 20px;
+}
+
+.item button{
+  margin-bottom: 10px;
+  width: 100%;
+  cursor: pointer;
+}

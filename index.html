@@ -20,6 +20,17 @@
         <div class="product-containet"></div>
       </div>
     </div>
+    <div class="card bg-light">
+      <div class="card-header">Создать товар</div>
+      <div class="card-body">
+        <form enctype="multipart/form-data" method="post" submit="sendPhotoInServer()">
+          <div class="form-group">
+            <input class="form-control" photo-input="photo" id="file" type="file" name="f">
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
