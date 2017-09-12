@@ -1,16 +1,16 @@
 /*
-*https://oauth.vk.com/blank.html#access_token=2ee038dce5b67a53c88017d2f449fad9ca41e0cd8ea525886e294052593302729598c214e9bb50e15118a&expires_in=86400&user_id=180517993
+*https://oauth.vk.com/blank.html#access_token=5ebaf24e180ced5bec9db767f18f335f277b68031c188338e1de4480f88e69df348fd32b2194461231655&expires_in=86400&user_id=180517993
 *https://oauth.vk.com/authorize?client_id=6176315&display=page&redirect_uri=&scope=market,photos&response_type=token&v=5.52
 *
 */
-$('#load').on('click', loadProduct);
-
+//$('#load').on('click', loadProduct);
+/*
 function getUrl(method, params){
   if(!method){
     throw new Error('Вы не указали метод');
   }
   params = params || {};
-  params['access_token'] = '2ee038dce5b67a53c88017d2f449fad9ca41e0cd8ea525886e294052593302729598c214e9bb50e15118a';
+  params['access_token'] = '5ebaf24e180ced5bec9db767f18f335f277b68031c188338e1de4480f88e69df348fd32b2194461231655';
   return 'https://api.vk.com/method/' + method +'?' + $.param(params);
 }
 function sendRequest(method, params, func){
@@ -28,7 +28,6 @@ function loadProduct(){
     drawProduct(data.response);
   })
 };
-
 function createProduct(){
   sendRequest('market.add', {owner_id: -153061474, name: 'test-name', description: 'test-desccription', category_id: 2, price: 1000, main_photo_id: 456239022}, function(data){
     console.log(data);
@@ -42,8 +41,6 @@ function getPhotoProduct(){
     return data.response.upload_url;
   });
 };
-
-
 function sendPhotoInServer(){
   $.ajax({
     url: 'https://pu.vk.com/c841135/upload.php?act=do_add&mid=180517993&aid=-53&gid=153061474&hash=37f9508a36071f56dca3cf5b25a099d7&rhash=fe1873f4c52a8135385ecd7bfd6b9252&swfupload=1&api=1&market_main_photo=1',
@@ -59,7 +56,7 @@ function sendPhotoInServer(){
       console.log(error);
     },
   });
-
+*/
 /*
   var photo = document.getElementById('file');
   var xhr = new XMLHttpRequest();
@@ -73,8 +70,8 @@ function sendPhotoInServer(){
     
     console.log(upload_file);
   }
-  */
 }
+  */
 
 function savePhotoProduct(){
   var url = getPhotoProduct();
@@ -84,18 +81,8 @@ function savePhotoProduct(){
   });
 };
 
-function removeProduct(id){
-  sendRequest('market.delete', {owner_id: -153061474, item_id: id}, function(data){
-    console.log(data);//903315
-  });
-};
 
-function restoreProduct(id){
-  sendRequest('market.restore', {owner_id: -153061474, item_id: id}, function(data){
-    console.log(data);//903315
-  });
-};
-
+/*
 function drawProduct(product){
   var html = '';
 
@@ -115,3 +102,4 @@ function drawProduct(product){
   }
   $('.product-containet').html(html);
 }
+*/
